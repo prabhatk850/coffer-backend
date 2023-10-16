@@ -8,7 +8,7 @@ const { DataModel } = require("./Database/Schema");
 
 const app = express();
 
-app.get("/view",(req,res)=>{
+app.get("/",(req,res)=>{
     
     DataModel.find().then((result)=>{
         res.send(result)
