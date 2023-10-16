@@ -4,11 +4,11 @@ const PORT =process.env.PORT || 3000;
 const Blackcoffer=require("./Database/Schema");
 const { DataModel } = require("./Database/Schema");
 var cors = require('cors');
-app.use(cors());
 
 
 
 const app = express();
+app.use(cors());
 
 app.get("/",(req,res)=>{
     
