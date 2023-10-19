@@ -13,7 +13,7 @@ app.use(cors());
 
 app.get("/",(req,res)=>{
     
-    DataModel.find().then((result)=>{
+    DataModel.find().skip().limit(10).then((result)=>{
         res.send(result)
     }).catch((err)=>{
         console.log("err",err)
